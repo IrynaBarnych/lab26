@@ -29,6 +29,10 @@ class Fraction:
         new_denominator = self.denominator * other.denominator
         return Fraction(new_numerator, new_denominator)
 
+    def __truediv__(self, other):
+        other.denominator, other.numerator = other.numerator, other.denominator
+        return Fraction.__mul__(self, other)
+
 
 fraction1 = Fraction(4, 7)
 fraction2 = Fraction(5, 8)
@@ -36,3 +40,4 @@ fraction2 = Fraction(5, 8)
 print(fraction1 + fraction2)
 print(fraction1 - fraction2)
 print(fraction1 * fraction2)
+print(fraction1 / fraction2)
