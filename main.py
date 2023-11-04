@@ -24,9 +24,15 @@ class Fraction:
         new_denominator = self.denominator * other.denominator #спільний знаменник
         return Fraction(new_numerator, new_denominator)
 
+    def __mul__(self, other):
+        new_numerator = self.numerator * other.numerator
+        new_denominator = self.denominator * other.denominator
+        return Fraction(new_numerator, new_denominator)
+
 
 fraction1 = Fraction(4, 7)
 fraction2 = Fraction(5, 8)
 
 print(fraction1 + fraction2)
 print(fraction1 - fraction2)
+print(fraction1 * fraction2)
