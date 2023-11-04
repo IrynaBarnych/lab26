@@ -1,40 +1,15 @@
-# Завдання
+# Завдання 1
+# Створіть клас «Дріб». Збережіть у класі чисельник та знаменник.
+# Реалізуйте методи класу для введеннявиведення даних. Також створіть методи класу для
+# виконання арифметичних операцій (додавання, віднімання, множення, ділення і т. д.). До вже
+# реалізованого класу «Дріб» додайте необхідні перевантажені методи та оператори.
 #
 
 
-class City:
-    def __init__(self, city_code):
-        self.
-        self. =
-        self. =
-        self. =
-        self. =
-        self.city_code = city_code
+class Fraction:
+    def __init__(self, numerator, denominator):
+        self.numerator = numerator
+        self.denominator = denominator
 
-    def get_(self):
-        return self.
-
-    def get_(self):
-        return self.
-
-    def get_(self):
-        return self.
-    def get_(self):
-        return self.
-
-    def get_e(self):
-        return self.
-
-    def get_city_code(self):
-        return self.city_code
-
-# Створення екземпляра класу
- = ()
-
-# Виведення інформації про Місто
-print(f"Назва міста: {()}")
-print(f"Назва регіону: {()}")
-print(f"Назва країни: {()}")
-print(f"Кількість жителів у місті: {()}")
-print(f"Поштовий індекс: {()}")
-print(f"Код міста: {City1.get_city_code()}")
+fraction1 = Fraction(4, 7)
+fraction2 = Fraction(5, 8)
