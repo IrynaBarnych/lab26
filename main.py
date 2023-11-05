@@ -15,14 +15,14 @@ class Book:
     def __lt__(self, other):
         return self.date < other.date
 
-    def print_info(self):
+    def Book(self):
         print(f"Назва книги: {self.title}, Автор: {self.author}, Жанр: {self.genre}, Дата випуску: {self.date}")
 
 my_book_info1 = Book("Кобзар", "Т. Г. Шевченко", "різні літературні жанри", "1840")
-my_book_info1.print_info()
+my_book_info1.Book()
 
 my_book_info2 = Book("Енеїда", "І. П. Котляревський", "комічна епічна поема", "1798")
-my_book_info2.print_info()
+my_book_info2.Book()
 
 date_difference = my_book_info1 - my_book_info2
 print(f"Різниця в роках: {date_difference}")
