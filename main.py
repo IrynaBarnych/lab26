@@ -3,17 +3,37 @@
 
 
 class Book:
-    def __init__(self, title, author, genre):
+    def __init__(self, title, author, genre, date):
         self.title = title
         self.author = author
         self.genre = genre
+        self.date = int(date)
+
+    def __sub__(self, other):
+        return self.date - other.date
+
+    def __lt__(self, other):
+        return self.date < other.date
 
     def print_info(self):
-        print(f"Назва книги: {self.title}, Автор: {self.author}, Жанр: {self.genre}")
+        print(f"Назва книги: {self.title}, Автор: {self.author}, Жанр: {self.genre}, Дата випуску: {self.date}")
 
-# Створення екземпляра класу
-my_book_info = Book("Кобзар", "Т. Г. Шевченко", "вірші")
-my_book_info.print_info()
+my_book_info1 = Book("Кобзар", "Т. Г. Шевченко", "різні літературні жанри", "1840")
+my_book_info1.print_info()
+
+my_book_info2 = Book("Енеїда", "І. П. Котляревський", "комічна епічна поема", "1798")
+my_book_info2.print_info()
+
+date_difference = my_book_info1 - my_book_info2
+print(f"Різниця в роках: {date_difference}")
+
+if my_book_info1 == my_book_info2:
+    print("Ці книги мають одного автора та однакову назву.")
+
+if my_book_info1 < my_book_info2:
+    print(f"{my_book_info1.title} вийшла раніше за {my_book_info2.title}.")
+else:
+    print(f"{my_book_info2.title} вийшла раніше за {my_book_info1.title}.")
 
 
 
