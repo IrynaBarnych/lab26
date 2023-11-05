@@ -10,10 +10,10 @@ class Stadium:
         self.country = country
         self.city = city
         self.capacity = capacity
-        self.length = float(length)  # Перетворення в числове значення
-        self.width = float(width)
-        self.distance_a = float(distance_a)
-        self.distance_b = float(distance_b)
+        self.length = length
+        self.width = width
+        self.distance_a = distance_a
+        self.distance_b = distance_b
     def __sub__(self, other):
         return (self.capacity - other.capacity)
 
@@ -27,13 +27,10 @@ class Stadium:
         distance2 = other.distance_a ** 2 + other.distance_b ** 2
         return abs(distance1 - distance2)
 
-
-
 stadion1 = Stadium("Олімпійський", "22.09.1923", "Україна", "Київ", 70050,
-                   "150", "100", "1", "2")
+                   150, 100, 1, 2)
 stadion2 = Stadium("Донбас-Арена", "29.09.2009", "Україна", "Донецьк",  525180,
-                   "105", "68", "2", "3")
-
+                   105, 68, 2, 3)
 
 difference = stadion1 - stadion2
 print(f"Різниця в місткості стадіонів: {difference} осіб")
