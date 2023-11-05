@@ -6,8 +6,8 @@ class Car:
         self.brand = brand
         self.model = model
         self.year = year
-        self.cost_USA = float(cost_USA)  # Перетворення в числове значення
-        self.dolar = float(dolar)  # Перетворення в числове значення
+        self.cost_USA = cost_USA
+        self.dolar = dolar
 
     def start_engine(self):
         print("Двигун запущено")
